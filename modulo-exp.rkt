@@ -1,5 +1,7 @@
 #lang racket
 
+(provide decimal->binary modulo-exp)
+
 (define (decimal->binary n)
   (let ([m (modulo n 2)])
     (if (zero? n)
@@ -16,5 +18,3 @@
                                (begin0 (* i x)
                                        (set! x
                                              (modulo (* x x) n))))) n)))
-      
-    
